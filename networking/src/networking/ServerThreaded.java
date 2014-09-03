@@ -16,12 +16,13 @@ public class ServerThreaded
 		try
 		{
 			int i = 1;
-			ServerSocket s = new ServerSocket(555);
+			int port = 15999;
+			ServerSocket s = new ServerSocket(port);
 			
 			while(true)
 			{
 				Socket incoming = s.accept();
-				System.out.println("Spawning " + i);
+				System.out.println("Spawning the number of client connected to the server running at "+ port " " + i);
 				Runnable r = new ThreadedEchoHandler(incoming);
 				Thread t = new Thread(r);
 				t.start();
