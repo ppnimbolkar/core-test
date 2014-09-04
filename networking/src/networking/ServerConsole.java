@@ -100,10 +100,10 @@ public class ServerConsole implements ActionListener
 		
 		clear.addActionListener(this);
 		
-		PrintStream printStream = new PrintStream(new CustomOutputStream(console));
+		//PrintStream printStream = new PrintStream(new CustomOutputStream(console));
 		standardOut = System.out;
-		System.setOut(printStream);
-		System.setErr(printStream);
+		//System.setOut(printStream);
+		//System.setErr(printStream);
 		
 		
 		
