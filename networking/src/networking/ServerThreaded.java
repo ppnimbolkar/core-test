@@ -22,7 +22,7 @@ public class ServerThreaded
 			while(true)
 			{
 				Socket incoming = s.accept();
-				System.out.println("Spawning the number of client connected to the server running at "+ port " " + i);
+				System.out.println("Spawning the number of client connected to the server running at "+ port+ " " + i);
 				Runnable r = new ThreadedEchoHandler(incoming);
 				Thread t = new Thread(r);
 				t.start();
